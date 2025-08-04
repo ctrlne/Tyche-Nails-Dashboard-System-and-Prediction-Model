@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyche Nails Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+
+    <!-- LOGIN PAGE -->
+    <div id="login-page">
+        <div class="card login-card">
+            <div class="logo-circle login-logo"><h1>tyche nails</h1></div>
+            <div id="login-content"></div>
+        </div>
+    </div>
+
+    <!-- MODALS (Pop-ups) -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title" class="modal-title">New Booking</h2>
+            <form id="booking-form">
+                <input type="hidden" id="booking-id">
+                <label for="client-name">Client Name</label>
+                <input type="text" id="client-name" required>
+                <label for="booking-date">Date</label>
+                <input type="date" id="booking-date" required>
+                <label for="start-time">Start Time</label>
+                <input type="time" id="start-time" required>
+                <label for="end-time">End Time</label>
+                <input type="time" id="end-time" required>
+                <label for="service-select">Service</label>
+                <select id="service-select" required></select>
+                <label for="staff-select">Assign Staff</label>
+                <select id="staff-select" required></select>
+                <div class="modal-actions">
+                    <button type="button" id="cancel-booking" class="button button-outline">Cancel</button>
+                    <button type="submit" class="button button-primary">Save Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="client-modal" class="modal">
+        <div class="modal-content">
+            <h2 class="modal-title">New Client</h2>
+            <form id="client-form">
+                 <label for="new-client-name">Client Name</label>
+                 <input type="text" id="new-client-name" required>
+                 <label for="new-client-level">Client Level</label>
+                 <select id="new-client-level">
+                    <option>New</option>
+                    <option>Regular</option>
+                    <option>VIP Client</option>
+                 </select>
+                 <div class="modal-actions">
+                    <button type="button" id="cancel-client" class="button button-outline">Cancel</button>
+                    <button type="submit" class="button button-primary">Save Client</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="message-modal" class="modal">
+        <div id="message-modal-content" class="modal-content"></div>
+    </div>
+
+
+    <!-- MAIN APP CONTAINER -->
+    <div class="app-container" style="display: none;">
+        <aside class="sidebar">
+            <div>
+                <div class="sidebar-logo"><div class="logo-circle"><h1>tyche nails</h1></div></div>
+                <nav id="main-nav">
+                    <a href="#Dashboard" class="nav-link active"><i data-lucide="layout-grid"></i><span>Dashboard</span></a>
+                    <a href="#Schedule" class="nav-link"><i data-lucide="calendar"></i><span>Schedule</span></a>
+                    <a href="#Inbox" class="nav-link"><i data-lucide="message-square"></i><span>Inbox</span></a>
+                    <a href="#Clients" class="nav-link"><i data-lucide="users"></i><span>Clients & Staff</span></a>
+                    <a href="#Services" class="nav-link"><i data-lucide="shopping-bag"></i><span>Services</span></a>
+                    <a href="#Reports" class="nav-link"><i data-lucide="bar-chart-3"></i><span>Reports</span></a>
+                </nav>
+            </div>
+            <nav>
+                <a href="#Settings" class="nav-link"><i data-lucide="settings"></i><span>Settings</span></a>
+                <a href="#" id="logout-btn" class="nav-link"><i data-lucide="log-out"></i><span>Logout</span></a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <h1 id="page-title">Good morning, Tyche Team!</h1>
+                    <p id="page-subtitle"></p>
+                </div>
+                <div class="header-right">
+                    <div class="header-controls">
+                        <button id="theme-toggle" class="control-btn" title="Toggle Theme"><i data-lucide="sun"></i></button>
+                        <button id="inbox-btn" class="control-btn" title="Go to Inbox">
+                            <i data-lucide="bell"></i>
+                            <span id="notification-dot" class="notification-dot" style="display: none;"></span>
+                        </button>
+                        <div class="profile">
+                            <div id="profile-avatar" class="profile-avatar"></div>
+                            <div class="profile-info">
+                                <p id="profile-name"></p>
+                                <small id="profile-email"></small>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="header-time" class="header-time"></p>
+                </div>
+            </header>
+
+            <div id="Dashboard" class="page active"></div>
+            <div id="Schedule" class="page"></div>
+            <div id="Inbox" class="page"></div>
+            <div id="Clients" class="page"></div>
+            <div id="Services" class="page"></div>
+            <div id="Reports" class="page"></div>
+            <div id="Settings" class="page"></div>
+        </main>
+    </div>
+
+    <!-- Lucide Icons Library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
