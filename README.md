@@ -1,7 +1,5 @@
 # End-to-End Salon Analytics and Prediction Platform
 
-## [View the Live Power BI Dashboard Here](YOUR_PUBLIC_POWER_BI_LINK_HERE)
-
 ### Project Overview
 This is a full-stack data science project that simulates a management and analytics system for a nail salon. The project demonstrates an end-to-end workflow, from data generation and storage in a full-stack web application to predictive modeling and business intelligence visualization.
 
